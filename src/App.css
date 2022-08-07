@@ -1,0 +1,186 @@
+/* Color for dark and light mode */
+
+html {
+  --background-color: white;
+  --secondary-background-color: #f7f8fa;
+  --stroke-color: #747474;
+  --text-color: black;
+  --accent-color: #056dfa;
+  --subtext-color: #747474;
+}
+
+html[data-theme="dark"] {
+  --background-color: #000000;
+  --secondary-background-color: #1c1c1e;
+  --stroke-color: #545458;
+  --text-color: white;
+  --accent-color: rgb(10, 132, 255);
+  --subtext-color: #ebebf5; /* #EBEBF5 O usar el mismo que stroke? */
+}
+
+/* Font */
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar css */
+
+.navbar {
+  display: flex;
+  height: 6%;
+  background-color: var(--secondary-background-color);
+  border-bottom: 1px solid var(--stroke-color);
+}
+
+.navbar .logo {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.navbar .logo-text {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 36px;
+  font-family: "San Francisco";
+}
+
+.navbar .options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+  color: var(--text-color);
+  padding-right: 10px;
+}
+
+.navbar-link:hover {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.theme {
+  width: 140px;
+  height: 70%;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "San Francisco";
+}
+
+/* Editor */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  overflow-y: hidden;
+  background-color: var(--background-color);
+}
+
+.editor {
+  display: flex;
+}
+
+/* Left side */
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Right side */
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* CSS for both text areas*/
+
+.text {
+  width: 42vw;
+  height: 50vh;
+  margin: 40px;
+  background-color: var(--secondary-background-color);
+  border: 1px solid var(--stroke-color);
+  resize: none;
+  outline: none;
+  font-size: 26px;
+  overflow-x: auto;
+  overflow-y: auto;
+  padding-top: 5px;
+  padding-left: 10px;
+  color: var(--text-color);
+}
+
+/* CSS for button + text */
+
+.buttonrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS for button */
+
+.option {
+  width: 82px;
+  height: 82px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 80%;
+  cursor: pointer;
+  font-family: "San Francisco";
+}
+
+/* CSS for right and left button */
+
+.left {
+  padding-right: 22px;
+}
+
+.right {
+  padding-top: 5px;
+}
+
+/* CSS for text under button */
+
+.subtext {
+  font-size: 14px;
+  color: var(--subtext-color);
+  padding-top: 8px;
+  font-family: "San Francisco";
+}
+
+@media screen and (max-width: 480px) {
+}
