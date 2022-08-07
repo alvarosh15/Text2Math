@@ -9,10 +9,16 @@ Text2Math main utility is to share math in social networks, you can write ascii 
 Text2Math is made in ReactJS so in order to install it, download the project and write 
 
 ```bash
+npm install
+```
+
+in your terminal, and then 
+
+```bash
 npm start
 ```
 
-in your terminal. 
+this way you will see Text2Math on your localhost.
 
 ## Built with 🛠
 - ReactJS
